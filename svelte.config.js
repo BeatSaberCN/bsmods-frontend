@@ -13,7 +13,7 @@ const config = {
 			},
 			fallback: 'plaintext',
 			routes: {
-				include: ['/*'],
+				include: ['/mods', '/mods/*'],
 				exclude: ['<all>']
 			}
 		})
