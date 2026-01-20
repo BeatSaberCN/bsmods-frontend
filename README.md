@@ -1,3 +1,11 @@
+# BeatMods Frontend For Chinese Community
+
+- Localization for chinese texts.
+- Navigator is removed. No edit avaliable maybe...
+- The backend is a request forwarder via cloudflare worker, it's always realtime and synchornized with beatmods.com
+
+All newly added code is under the MIT license, just like the upstream project.
+
 # BadBSMods-Frontend
 
 Frontend for [BadBSMods](https://github.com/Saeraphinx/badbsmods) that is
