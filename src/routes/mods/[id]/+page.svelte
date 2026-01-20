@@ -348,8 +348,15 @@
           </div>
         </div>
         <div class="order-1 flex flex-[2.5] flex-col gap-4 lg:order-3">
-          <div class="flex-col rounded-xl bg-neutral-background-2 p-4 shadow-4">
-            翻译不好？<Link href={`https://github.com/BeatSaberCN/beatmods-agent/edit/master/inline_database/storage/mods/${mod.info.id}.json`}>贡献翻译</Link>
+          <div>
+            <div class="flex-col rounded-md bg-neutral-background-2 p-4 shadow-4"
+                style="display:inline-block;width:fit-content">
+              翻译不好？<Link target="=_blank" href={`https://github.com/BeatSaberCN/beatmods-agent/edit/master/inline_database/storage/mods/${mod.info.id}.json`}>贡献翻译</Link>
+            </div>
+            <div class="flex-col rounded-md bg-neutral-background-2 p-4 shadow-4"
+              style="display:inline-block;width:fit-content">
+              <Link target="=_blank" href={`https://beatmods.com/mods/${mod.info.id}`}>BeatMods</Link>
+            </div>
           </div>
           <div
             class="flex h-fit flex-col rounded-xl bg-neutral-background-2 p-4 shadow-4"
