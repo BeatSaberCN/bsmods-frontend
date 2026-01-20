@@ -9,19 +9,8 @@ This is only used for a localized beatmods source.
 
 ## Deploy notes
 
-Only the following pages should be avaliable:
-- `/mods`
-- `/mods/[0-9]+`
-- `/user/[0-9]+`
-- `/_app`
-
-Do NOT allow users access other pages when deploy.
-
-All newly added code is under the MIT license, just like the upstream project.
-
 ```cmd
 npm run build
-// npx wrangler dev
 npx wrangler deploy
 ```
 
