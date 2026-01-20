@@ -1,14 +1,20 @@
-# BeatMods Frontend For Chinese Community
+# BadBSMods Frontend For Chinese Community
+
+This is only used for a localized beatmods source.
 
 - Localization for chinese texts.
 - Navigator is removed. No edit avaliable maybe...
 - The backend is a request forwarder via cloudflare worker. It's always realtime and synchornized with `beatmods.com`.
+- A `/front` url prefix is hardcoded.
 
 ## Deploy notes
 
 Only the following pages should be avaliable:
 - `/mods`
 - `/mods/[0-9]+`
+- `/_app`
+
+Do NOT allow users access other pages when deploy.
 
 All newly added code is under the MIT license, just like the upstream project.
 
