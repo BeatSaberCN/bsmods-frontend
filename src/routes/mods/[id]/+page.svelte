@@ -219,7 +219,7 @@
   {:then}
     {#if !mod}
       <div class="flex h-28 flex-row items-center justify-center gap-4">
-        <p>No mod found!</p>
+        <p>模组未找到！</p>
       </div>
     {:else}
       <ModCardEditable
