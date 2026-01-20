@@ -1,0 +1,9 @@
+{
+	"site": {
+		"bucket": ".cloudflare/public"
+	},
+	"assets": {
+		"directory": ".cloudflare/public"
+		// "binding": "ASSETS" // Exclude this if you don't have a `main` key configured.
+	}
+}
