@@ -130,7 +130,7 @@
 {:else}
   <button
     onclick={() => {
-      window.open(`${window.origin}/mods/${mod.id}`, "_self");
+      window.open(`${window.origin}/front/mods/${mod.id}`, "_self");
     }}
   >
     {@render card()}

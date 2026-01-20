@@ -24,7 +24,7 @@
     </span>
     <div class="flex flex-col justify-center pl-2">
       <!-- Title & Version string -->
-      <a class="text-xl text-neutral-foreground-1 text-wrap break-words max-w-80" href={`/mods/${mod.id}`}>
+      <a class="text-xl text-neutral-foreground-1 text-wrap break-words max-w-80" href={`/front/mods/${mod.id}`}>
         {mod.name}
       </a>
       <!-- Author String -->
