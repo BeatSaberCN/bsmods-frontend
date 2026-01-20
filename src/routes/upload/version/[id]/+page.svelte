@@ -534,7 +534,7 @@
       <div
         class="items-left flex flex-col gap-2 rounded-xl bg-neutral-background-2 p-4 shadow-4"
       >
-        <h1 class="mx-auto text-lg font-semibold">Supported Game Versions</h1>
+        <h1 class="mx-auto text-lg font-semibold">支持游戏版本</h1>
         {#each supportedGameVersions as version}
           <div
             class="flex h-fit w-auto flex-row items-center gap-2 rounded bg-neutral-background-3 p-2 shadow-2"

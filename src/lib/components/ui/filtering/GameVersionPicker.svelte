@@ -66,7 +66,7 @@
   >
     {#if !removeLabel}
       <Label class="flex-2 h-[20px] disabled:text-black" {required}
-        >Supports:</Label
+        >版本号:</Label
       >
     {/if}
     <InputSkin
@@ -77,7 +77,7 @@
       {#if selectedVersion}
         <span>{selectedVersion}</span>
       {:else}
-        <span>Select a version</span>
+        <span>选择版本</span>
       {/if}
 
       <Dropdown.Arrow />

@@ -148,11 +148,11 @@
 >
   <App {theme}>
     <div class="app overflow-y-clip bg-neutral-background-3">
-      <Header
+      <!-- <Header
         userData={data}
         isLight={theme.colorBackgroundOverlay !==
           webDarkTheme.colorBackgroundOverlay}
-      />
+      /> -->
       {#if showPrideBanner}
       <div class="w-auto h-12">
         <div class="w-full h-full prideflag">

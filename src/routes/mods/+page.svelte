@@ -131,19 +131,19 @@
       <div class="flex flex-col gap-2 items-center justify-between bg-neutral-background-2 p-2 rounded-lg mr-4">
         <Dropdown.Root bind:value={viewStyle}>
           <Dropdown.Trigger class="flex w-full items-center justify-center gap-2" let:value>
-            <Label>View:</Label>
+            <Label>视图:</Label>
 					  <InputSkin class="min-w-[192px]">
 						  {#if value == "grid"}
-                <span>Grid View</span>
+                <span>网格视图</span>
               {:else}
-                <span>List View</span>
+                <span>列表视图</span>
               {/if}
 							<Dropdown.Arrow />
 						</InputSkin>
           </Dropdown.Trigger>
           <Dropdown.Menu>
-            <Dropdown.Item value="list">List View</Dropdown.Item>
-            <Dropdown.Item value="grid">Grid View</Dropdown.Item>
+            <Dropdown.Item value="list">列表视图</Dropdown.Item>
+            <Dropdown.Item value="grid">网格视图</Dropdown.Item>
           </Dropdown.Menu>
 			  </Dropdown.Root>
       </div>

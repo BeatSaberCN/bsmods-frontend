@@ -103,7 +103,7 @@
             >{event.name}</Link
           >
           <span class="mb-0.5 mt-auto h-fit text-xs text-neutral-foreground-2"
-            >By {event.organizer}</span
+            >作者: {event.organizer}</span
           >
         </div>
       </div>

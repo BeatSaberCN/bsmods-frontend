@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Mod, ModVersion } from "$lib/types/Mods";
-  import { Status } from "$lib/types/Status";
+  import { Status, StatusTranslate } from "$lib/types/Status";
   import { appendURL } from "$lib/utils/url";
   import { Accordion, AccordionHeader, AccordionItem, AccordionPanel, Button, Label, Link, Spinner, Dropdown, InputSkin, Tooltip } from "@svelte-fui/core";
   import { ArrowDownloadRegular, DismissRegular, InfoFilled, LinkRegular, WarningFilled } from "@svelte-fui/icons";
@@ -177,24 +177,24 @@
 
       <!-- design is my passion - please revisit these colors, theyre fucked  -->
       {#if version.status === Status.Verified}
-        <p class="silly-capitalize rounded-md bg-green-500 dark:bg-green-700 p-1 text-sm">
-          {version.status}
+        <p class="silly-capitalize rounded-md bg-green-500 dark:bg-green-700 p-1 text-sm" style="min-width:50px">
+          {StatusTranslate(version.status)}
         </p>
       {:else if version.status === Status.Pending}
         <p class="silly-capitalize rounded-md bg-purple-500 dark:bg-purple-700 p-1 text-sm">
-          {version.status}
+          {StatusTranslate(version.status)}
         </p>
       {:else if version.status === Status.Unverified}
-        <p class="silly-capitalize rounded-md bg-orange-500 dark:bg-orange-700 p-1 text-sm">
-          {version.status}
+        <p class="silly-capitalize rounded-md bg-orange-500 dark:bg-orange-700 p-1 text-sm" style="min-width:50px">
+          {StatusTranslate(version.status)}
         </p>
       {:else if version.status === Status.Private}
-        <p class="silly-capitalize rounded-md bg-blue-500 dark:bg-blue-700 p-1 text-sm">
-          {version.status}
+        <p class="silly-capitalize rounded-md bg-blue-500 dark:bg-blue-700 p-1 text-sm" style="min-width:50px">
+          {StatusTranslate(version.status)}
         </p>
       {:else if version.status === Status.Removed}
-        <p class="silly-capitalize rounded-md bg-red-500 dark:bg-red-700 p-1 text-sm">
-          {version.status}
+        <p class="silly-capitalize rounded-md bg-red-500 dark:bg-red-700 p-1 text-sm" style="min-width:50px">
+          {StatusTranslate(version.status)}
         </p>
       {/if}
       <!--<div class="flex flex-row bg-neutral-background-3 rounded-md p-1 px-1 items-center gap-1">
@@ -219,7 +219,7 @@
     <div>
       <Accordion collapsible={true} bind:value={accordionValue}>
         <AccordionItem value="gv" class="m-0 p-0">
-          <AccordionHeader class="m-0 p-0 font-semibold">{accordionValue == `gv` ? `-` : `+`} Supported Game Versions</AccordionHeader>
+          <AccordionHeader class="m-0 p-0 font-semibold">{accordionValue == `gv` ? `-` : `+`} 支持游戏版本</AccordionHeader>
           <AccordionPanel class="pb-2">
             <div class="flex flex-row flex-wrap items-center text-center">
               {#each version.supportedGameVersions as supportedGameVersion, i}
@@ -248,7 +248,7 @@
                   {#if data}
                     <span>{data.version}</span>
                   {:else}
-                    <span>Select a version</span>
+                    <span>选择版本</span>
                   {/if}
                   <Dropdown.Arrow />
                 </InputSkin>
@@ -272,12 +272,12 @@
         <AccordionItem value="deps" class="m-0 p-0">
           <AccordionHeader class="m-0 p-0 font-semibold" on:click={() => {
             getDeps();
-          }}>{accordionValue == `deps` ? `-` : `+`} Dependencies</AccordionHeader>
+          }}>{accordionValue == `deps` ? `-` : `+`} 依赖列表</AccordionHeader>
           <AccordionPanel class="pb-2">
             {#if depObjsLoading}
               <div class="flex flex-row justify-center gap-2">
                 <Spinner size="xs">
-                  <Label>Loading...</Label>
+                  <Label>加载中...</Label>
                 </Spinner>
               </div>
             {:else}
@@ -288,7 +288,7 @@
                   {/each}
                 </div>
               {:else}
-                <p>No dependencies</p>
+                <p>没有依赖</p>
               {/if}
               {#if isEditMode}
                 <p>Dependency editing pending...</p>
@@ -309,20 +309,20 @@
         </AccordionItem>
         {/if}
         <AccordionItem value="info">
-          <AccordionHeader class="m-0 p-0 font-semibold">{accordionValue == `info` ? `-` : `+`} More Information</AccordionHeader>
+          <AccordionHeader class="m-0 p-0 font-semibold">{accordionValue == `info` ? `-` : `+`} 更多信息</AccordionHeader>
           <AccordionPanel class="pb-2">
             <div class="flex flex-row flex-wrap gap-1 pt-1">
               <p class="p-1 bg-neutral-background-3 rounded-md">ID: {version.id}</p>
               {#if version.dependencies.length > 0}
-                <p class="p-1 bg-neutral-background-3 rounded-md">Dependency IDs: {version.dependencies.join(`, `)}</p>
+                <p class="p-1 bg-neutral-background-3 rounded-md">依赖的ID: {version.dependencies.join(`, `)}</p>
               {/if}
-              <p class="p-1 bg-neutral-background-3 rounded-md">Uploaded by: {version.author.username} (ID: {version.author.id})</p>
-              <p class="p-1 bg-neutral-background-3 rounded-md">Hash: {version.zipHash}</p>
-              <p class="p-1 bg-neutral-background-3 rounded-md">Upload Date: {new Date(version.createdAt).toLocaleString()}</p>
-              <p class="p-1 bg-neutral-background-3 rounded-md">Approved by: {version.lastApprovedById}</p>
-              <p class="p-1 bg-neutral-background-3 rounded-md">Last Updated by: {version.lastUpdatedById}</p>
-              <p class="p-1 bg-neutral-background-3 rounded-md">Last Updated: {new Date(version.updatedAt).toLocaleString()}</p>
-              <p class="p-1 bg-neutral-background-3 rounded-md">File Size: {version.fileSize} bytes</p>
+              <p class="p-1 bg-neutral-background-3 rounded-md">上传者: {version.author.username} (ID: {version.author.id})</p>
+              <p class="p-1 bg-neutral-background-3 rounded-md">哈希值: {version.zipHash}</p>
+              <p class="p-1 bg-neutral-background-3 rounded-md">上传日期: {new Date(version.createdAt).toLocaleString()}</p>
+              <p class="p-1 bg-neutral-background-3 rounded-md">验证者: {version.lastApprovedById}</p>
+              <p class="p-1 bg-neutral-background-3 rounded-md">上次更新作者: {version.lastUpdatedById}</p>
+              <p class="p-1 bg-neutral-background-3 rounded-md">上次更新日期: {new Date(version.updatedAt).toLocaleString()}</p>
+              <p class="p-1 bg-neutral-background-3 rounded-md">文件大小: {version.fileSize} 字节</p>
             </div>
           </AccordionPanel>
         </AccordionItem>
@@ -380,7 +380,7 @@
       onclick={() => {
         window.open(appendURL(`cdn/mod/${version.zipHash}.zip`));
       }}>
-      Download{version.status === Status.Private ? `` : ` (${getFileSizeString()})`}
+      下载{version.status === Status.Private ? `` : ` (${getFileSizeString()})`}
     </Button>
     {/if}
   </div>

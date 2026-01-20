@@ -26,7 +26,7 @@
   import type { DisplayApprovalModalFunction } from "$lib/types/Approval";
   import ApprovalDialog from "$lib/components/ui/approval/ApprovalDialog.svelte";
   import { insertSpaces } from "$lib/utils/string";
-  import { Status } from "$lib/types/Status";
+  import { Status, StatusTranslate } from "$lib/types/Status";
 
   let { data }: { data: PageData } = $props();
 
@@ -371,23 +371,23 @@
             {:else}
               <div class="flex flex-row justify-evenly gap-2">
                 <div class="flex flex-col gap-1 justify-center align-middle">
-                  <p class="text-sm font-semibold">More Info:</p>
-                  <Link href={mod.info.gitUrl} target="=_blank" rel="no-referrer">{mod.info.gitUrl.includes(`github.com`) ? `Source Control` : `Website`}</Link>
+                  <p class="text-sm font-semibold">更多信息:</p>
+                  <Link href={mod.info.gitUrl} target="=_blank" rel="no-referrer">{mod.info.gitUrl.includes(`github.com`) ? `源代码` : `网站`}</Link>
                 </div>
                 <div class="flex flex-col gap-1 justify-center align-middle">
-                  <p class="text-sm font-semibold">Category:</p>
+                  <p class="text-sm font-semibold">分类:</p>
                   <p class="silly-capitalize">{mod.info.category}</p>
                 </div>
                 <div class="flex flex-col gap-1 justify-center align-middle">
-                  <p class="text-sm font-semibold">Game:</p>
+                  <p class="text-sm font-semibold">游戏名:</p>
                   <p class="silly-capitalize">{insertSpaces(mod.info.gameName)}</p>
                 </div>
                 <div class="flex flex-col gap-1 justify-center align-middle">
-                  <p class="text-sm font-semibold">Status:</p>
-                  <p class="silly-capitalize">{mod.info.status}</p>
+                  <p class="text-sm font-semibold">状态:</p>
+                  <p class="silly-capitalize">{StatusTranslate(mod.info.status)}</p>
                 </div>
                 <div class="flex flex-col gap-1 justify-center align-middle">
-                  <p class="text-sm font-semibold">Created at:</p>
+                  <p class="text-sm font-semibold">创建时间:</p>
                   <p class="silly-capitalize">{new Date(mod.info.createdAt).toLocaleString()}</p>
                 </div>
               </div>

@@ -51,7 +51,7 @@
         >
         {#if author}
           <span class="text-md mb-0.5 mt-auto h-fit text-neutral-foreground-2"
-            >By
+            >作者
             {#if Array.isArray(author)}
               {#each author as singleAuthor, i}
                 <Link
@@ -92,7 +92,7 @@
               <svg viewBox="0 0 30 30" class="w-6 text-neutral-foreground-2 text-yellow-400 md:w-6">
                 <WarningFilled />
               </svg>
-              <span class="tooltiptext">This is a very large mod!</span>
+              <span class="tooltiptext">这个模组非常大！</span>
             </span>
           {/if}
         </div>

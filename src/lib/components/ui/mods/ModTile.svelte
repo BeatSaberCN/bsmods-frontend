@@ -31,7 +31,7 @@
       <div class="flex flex-row gap-2">
         {#if mod.authors && mod.authors.length > 0}
           <span class="text-sm text-neutral-foreground-2">
-            By
+            作者
             {#each mod.authors as author, i}
               <Link
                 class="text-neutral-foreground-1"
@@ -47,7 +47,7 @@
       <!-- Version String -->
       {#if version}
         <span class="text-sm text-neutral-foreground-2">
-          {version.modVersion} | Updated {getRelativeTimeString(new Date(version.updatedAt))}
+          {version.modVersion} | 上次更新 {getRelativeTimeString(new Date(version.updatedAt))}
         </span>
       {/if}
     </div>
@@ -57,13 +57,13 @@
     {#if mod.summary}
       <p>{mod.summary}</p>
     {:else}
-      <p class="italic">No summary available :(</p>
+      <p class="italic">没有可以用展示的摘要 :(</p>
     {/if}
   </div>
   <!-- Bottom buttons -->
   <div class="flex flex-row gap-2 mt-auto">
     <Button href={`/mods/${mod.id}`} class="flex-1">
-      More Info
+      更多信息
     </Button>
     <Button
       onclick={() => {
@@ -72,7 +72,7 @@
       class="flex-1"
       disabled={!version}
     >
-      Download
+      下载
     </Button>
   </div>
 </div>

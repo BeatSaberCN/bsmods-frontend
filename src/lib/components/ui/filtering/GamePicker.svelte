@@ -18,12 +18,12 @@
     class="flex w-full items-center justify-center gap-3"
     let:data
   >
-    <Label class="flex-2 h-[20px]">Game:</Label>
+    <Label class="flex-2 h-[20px]">游戏名:</Label>
     <InputSkin class="flex-1" ariaInvalid={!selectedGame && required}>
       {#if data}
         <span>{insertSpaces(data as string)}</span>
       {:else}
-        <span>Select a game</span>
+        <span>选择游戏</span>
       {/if}
 
       <Dropdown.Arrow />

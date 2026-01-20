@@ -12,6 +12,7 @@
   import { MediaQuery } from "svelte/reactivity";
   import { getRelativeTimeString } from "$lib/utils/time";
     import ModTile from "./ModTile.svelte";
+    import { StatusTranslate } from "$lib/types/Status";
 
   let {
     mod,
@@ -60,7 +61,7 @@
           </svg>
           <span
             class="silly-capitalize text-sm text-neutral-foreground-2 md:text-base"
-            >{mod.mod.status}</span
+            >{StatusTranslate(mod.mod.status)}</span
           >
         </div>
       </div>

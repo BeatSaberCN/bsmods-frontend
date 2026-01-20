@@ -26,7 +26,7 @@
           localStorage.setItem("theme", "light");
         }}
       >
-        <div>Light</div>
+        <div>日间模式</div>
       </Menu.Item>
       <Menu.Item
         on:click={() => {
@@ -34,7 +34,7 @@
           localStorage.setItem("theme", "dark");
         }}
       >
-        <div>Dark</div>
+        <div>夜间模式</div>
       </Menu.Item>
       <Menu.Item
         on:click={() => {
@@ -42,7 +42,7 @@
           localStorage.setItem("showCursor", showCursor.toString());
         }}
       >
-        <div>Toggle Block Cursor</div>
+        <div>切换鼠标方块</div>
       </Menu.Item>
     </Menu.Group>
   </Menu.Root>
