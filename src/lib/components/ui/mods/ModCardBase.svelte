@@ -41,7 +41,7 @@
   >
     {#if inModPage}
     <!-- 导航栏被我给删了，所以加个返回按钮 -->
-    <a style="height:90%;display:flex;margin:auto 0;border-radius:4px" class="shadow-2" href=".">
+    <a style="height:90%;display:flex;margin:auto 0;border-radius:4px" class="shadow-2" href="/front/mods">
       <div style="width:20px;height:20px;margin:auto 0;" >
         <svg class="" viewBox="0 0 20 20" ><ArrowLeftFilled/></svg>
       </div>
