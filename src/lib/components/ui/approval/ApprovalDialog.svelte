@@ -162,7 +162,7 @@
           <Spinner />
         </div>
         <div class="flex flex-col gap-4 pb-4">
-          <Button disabled={true}>Loading...</Button>
+          <Button disabled={true}>加载中...</Button>
         </div>
       {:else}
       <div class="flex flex-row gap-4 pb-4">

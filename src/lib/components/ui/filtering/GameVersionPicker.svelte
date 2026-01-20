@@ -95,10 +95,10 @@
       {/each}
 
       {#if searchDataLoading}
-        <p class="bg-transparent">Loading...</p>
+        <p class="bg-transparent">加载中...</p>
       {/if}
       {#if searchDataError}
-        <p class="bg-transparent">Error loading data</p>
+        <p class="bg-transparent">数据加载错误</p>
       {/if}
 
       {#if allGameVersions.length === 0 && !searchDataLoading && !searchDataError}

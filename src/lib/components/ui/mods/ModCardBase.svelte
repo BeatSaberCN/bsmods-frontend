@@ -12,6 +12,7 @@
     latestSize,
     author,
     smallCorners = false,
+    inModPage = false,
     slot,
     info,
   }: {
@@ -19,6 +20,7 @@
     latestSize?: number | undefined;
     author: ModAuthor | ModAuthor[] | undefined;
     smallCorners?: boolean;
+    inModPage?: boolean;
     slot?: Snippet;
     info?: Snippet;
   } = $props();
@@ -37,12 +39,14 @@
     class="flex-2 pointer-events-auto flex h-28 cursor-pointer gap-2 rounded-[17.5px] bg-neutral-background-2 p-[7.5px] shadow-4 md:h-[120px] md:cursor-default"
     class:!rounded-xl={smallCorners || !isNotInsanelyStupidTiny.current}
   >
+    {#if inModPage}
     <!-- 导航栏被我给删了，所以加个返回按钮 -->
     <a style="height:90%;display:flex;margin:auto 0;border-radius:4px" class="shadow-2" href="/mods">
       <div style="width:20px;height:20px;margin:auto 0;" >
         <svg class="" viewBox="0 0 20 20" ><ArrowLeftFilled/></svg>
       </div>
     </a>
+    {/if}
 
     {#if isNotInsanelyStupidTiny.current}
       <ModIcon

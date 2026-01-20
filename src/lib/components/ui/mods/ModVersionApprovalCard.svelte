@@ -188,7 +188,7 @@
       ></div>
       <div class="flex h-28 flex-row items-center justify-center gap-4">
         <Spinner />
-        <p>Loading...</p>
+        <p>加载中...</p>
       </div>
     </div>
   {:else}

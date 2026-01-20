@@ -16,6 +16,7 @@
     summary = $bindable(),
     icon = $bindable(),
     iconFile = $bindable(),
+    inModPage = false,
     saveFunc,
   }: {
     mod: Mod;
@@ -25,6 +26,7 @@
     summary: string | undefined;
     icon: string | undefined;
     iconFile: File | undefined;
+    inModPage?: boolean;
     saveFunc: () => void;
   } = $props();
 
@@ -123,6 +125,7 @@
     author={mod.authors}
     slot={editingMarker}
     smallCorners={true}
+    inModPage={inModPage}
   />
 {:else}
   <div

@@ -214,7 +214,7 @@
   {#await getMods()}
     <div class="flex h-28 flex-row items-center justify-center gap-4">
       <Spinner />
-      <p>Loading...</p>
+      <p>加载中...</p>
     </div>
   {:then}
     {#if !mod}
@@ -231,6 +231,7 @@
         bind:icon
         bind:iconFile
         saveFunc={save}
+        inModPage={true}
       />
       <div class="flex flex-col gap-4 lg:flex-row">
         <div
@@ -277,7 +278,7 @@
                     class="flex h-fit flex-row items-center justify-center gap-4"
                   >
                     <Spinner />
-                    <p>Loading...</p>
+                    <p>加载中...</p>
                   </div>
                 {:else}
                   <Button onclick={submit}>

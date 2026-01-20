@@ -170,15 +170,15 @@
       </svg>
       {#if !modSearchLoading}
         {#if selectedVersion}
-          <p>No mods found</p>
+          <p>没有找到模组</p>
         {:else}
-          <p>Select a version to see mods</p>
+          <p>选择版本，以浏览模组列表</p>
         {/if}
       {/if}
     {/if}
     {#if selectedVersion}
       {#if modSearchLoading}
-        <p>Loading...</p>
+        <p>加载中...</p>
       {:else if modSearchError}
         <p>There was an error loading mods</p>
       {:else}

@@ -181,7 +181,7 @@
     {#if loadingSubmit}
       <div class="flex h-fit flex-row items-center justify-center gap-4">
         <Spinner />
-        <p>Loading...</p>
+        <p>加载中...</p>
       </div>
     {:else}
       <Button onclick={deny} class="text-palette-red-foreground-1">

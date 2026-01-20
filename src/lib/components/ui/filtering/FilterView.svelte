@@ -25,7 +25,7 @@
   >
     <div class="flex h-8 flex-row gap-2">
       <div class="search flex-1" role="searchbox">
-        <Input size="lg" placeholder="Search mods" bind:value={search} />
+        <Input size="lg" placeholder="搜索模组" bind:value={search} />
       </div>
       <!-- <Button class="p-0 aspect-square">
         <Icon>

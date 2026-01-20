@@ -467,12 +467,12 @@
   {#await getMods()}
     <div class="flex h-28 flex-row items-center justify-center gap-4">
       <Spinner />
-      <p>Loading...</p>
+      <p>加载中...</p>
     </div>
   {:then}
     {#if !mod}
       <div class="flex h-28 flex-row items-center justify-center gap-4">
-        <p>No mod found!</p>
+        <p>没有找到模组！</p>
       </div>
     {:else}
       <ModCardBase
