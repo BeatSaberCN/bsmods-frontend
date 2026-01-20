@@ -155,9 +155,7 @@
         class="flex-2 inline h-fit gap-2 rounded-xl bg-neutral-background-2 p-[7.5px] shadow-4"
       >
         <span>
-          Your device is too small to effectively display mod icons, update
-          times, and other decorative info. Visit their respective mod pages to
-          see these.
+          你的设备屏幕太小，无法显示模组图标、更新日期等信息。请到各详情页面查看。
           <svg class="inline w-[1.5em]" viewBox="0 0 20 20">
             <EmojiSadRegular />
           </svg>
@@ -180,7 +178,7 @@
       {#if modSearchLoading}
         <p>加载中...</p>
       {:else if modSearchError}
-        <p>There was an error loading mods</p>
+        <p>加载错误</p>
       {:else}
         <!-- Mod Cards & Tiles -->
         {#if viewStyle === "list" || !isNotInsanelyStupidTiny.current}

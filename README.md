@@ -12,6 +12,7 @@ This is only used for a localized beatmods source.
 Only the following pages should be avaliable:
 - `/mods`
 - `/mods/[0-9]+`
+- `/user/[0-9]+`
 - `/_app`
 
 Do NOT allow users access other pages when deploy.
