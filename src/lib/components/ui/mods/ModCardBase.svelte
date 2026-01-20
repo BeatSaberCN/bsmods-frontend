@@ -128,13 +128,13 @@
 {#if isNotMobile.current}
   {@render card()}
 {:else}
-  <button
+  <!-- <button
     onclick={() => {
       window.open(`${window.origin}/front/mods/${mod.id}`, "_self");
     }}
-  >
+  > -->
     {@render card()}
-  </button>
+  <!-- </button> -->
 {/if}
 
 <style>
