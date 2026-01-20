@@ -1,7 +1,7 @@
 import type { Handle } from '@sveltejs/kit';
 
 const white_list:Array<RegExp> = [
-    new RegExp(`^/front/user(/[0-9+])?$`),
+    new RegExp(`^/front/user(/[0-9]+)?$`),
     new RegExp(`^/front/mods(/[0-9]+)?$`)
 ]
 
