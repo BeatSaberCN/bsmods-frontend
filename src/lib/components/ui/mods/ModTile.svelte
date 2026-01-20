@@ -36,7 +36,7 @@
               <Link
                 class="text-neutral-foreground-1"
                 as="button"
-                on:click={() => (window.location.href = `/user/${author.id}`)}
+                on:click={() => (window.location.href = `/front/user/${author.id}`)}
               >
                 {author.username}{i < mod.authors.length - 1 ? ", " : ""}
               </Link>

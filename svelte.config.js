@@ -16,7 +16,7 @@ const config = {
       },
 			fallback: 'plaintext',
 			routes: {
-				include: ['/mods', '/mods/*','/user/*'],
+				include: ['/mods', '/mods/*', '/user','/user/*'],
 				exclude: ['<all>']
 			}
 		})

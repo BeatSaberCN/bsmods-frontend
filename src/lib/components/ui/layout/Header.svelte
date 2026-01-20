@@ -32,7 +32,7 @@
   }
 
   function goToProfile() {
-    window.open(`/user/${userData.userId}`, "_self");
+    window.open(`/front/user/${userData.userId}`, "_self");
   }
 
   let isDesktop = new MediaQuery("min-width: 700px");
