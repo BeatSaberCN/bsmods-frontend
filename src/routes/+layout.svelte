@@ -121,15 +121,15 @@
 </script>
 
 <svelte:head>
-  <meta property="og:title" content="BeatMods" />
+  <meta property="og:title" content="MirrorMods" />
   <meta
     property="og:description"
-    content="A Beat Saber mod repository maintained by the Beat Saber Modding Group"
+    content="This is a mirror site of BeatMods"
   />
-  <title>BeatMods</title>
+  <title>MirrorMods</title>
   <meta
     name="description"
-    content="A Beat Saber mod repository maintained by the Beat Saber Modding Group"
+    content="This is a mirror site of BeatMods"
   />
   <meta
     property="og:image"
