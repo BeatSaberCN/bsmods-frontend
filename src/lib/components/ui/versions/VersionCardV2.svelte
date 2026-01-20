@@ -284,7 +284,7 @@
               {#if version.dependencies.length > 0}
                 <div class="flex flex-row flex-wrap gap-2 pt-1">
                   {#each depObjs as depObj}
-                    <Link href="/mods/{depObj.mod.id}" appearance="subtle"><p class="rounded-md p-1 {depObj.modVersion.status !== Status.Verified || depObj.mod.status !== Status.Verified ? `bg-orange-200 dark:bg-orange-950` : `bg-neutral-background-3`} text-sm">{depObj.mod.name} v{depObj.modVersion.modVersion}</p></Link>
+                    <Link href="/front/mods/{depObj.mod.id}" appearance="subtle"><p class="rounded-md p-1 {depObj.modVersion.status !== Status.Verified || depObj.mod.status !== Status.Verified ? `bg-orange-200 dark:bg-orange-950` : `bg-neutral-background-3`} text-sm">{depObj.mod.name} v{depObj.modVersion.modVersion}</p></Link>
                   {/each}
                 </div>
               {:else}

@@ -120,7 +120,7 @@
           {#each event.linkedMods as mod}
             <Button
               class="disabled fds-button flex-grow"
-              href="/mods/{mod.id}"
+              href="/front/mods/{mod.id}"
               disabled={!mod.available}>{mod.name}</Button
             >
           {/each}

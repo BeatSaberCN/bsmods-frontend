@@ -41,7 +41,7 @@
   >
     {#if inModPage}
     <!-- 导航栏被我给删了，所以加个返回按钮 -->
-    <a style="height:90%;display:flex;margin:auto 0;border-radius:4px" class="shadow-2" href="/mods">
+    <a style="height:90%;display:flex;margin:auto 0;border-radius:4px" class="shadow-2" href=".">
       <div style="width:20px;height:20px;margin:auto 0;" >
         <svg class="" viewBox="0 0 20 20" ><ArrowLeftFilled/></svg>
       </div>
@@ -51,13 +51,13 @@
     {#if isNotInsanelyStupidTiny.current}
       <ModIcon
         src={appendURL(`cdn/icon/${mod.iconFileName}`)}
-        modUrl="/mods/{mod.id}"
+        modUrl="/front/mods/{mod.id}"
         {smallCorners}
       />
     {/if}
     <div class="grid h-fit gap-2">
       <div class="flex h-fit w-fit flex-1 flex-row gap-1 md:mt-1">
-        <a class="text-lg leading-5 md:text-2xl" href="/mods/{mod.id}"
+        <a class="text-lg leading-5 md:text-2xl" href="/front/mods/{mod.id}"
           >{mod.name}</a
         >
         {#if author}

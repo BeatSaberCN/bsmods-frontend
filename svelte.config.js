@@ -11,6 +11,9 @@ const config = {
 				environment: undefined,
 				persist: undefined
 			},
+      paths: {
+        base: 'front'
+      },
 			fallback: 'plaintext',
 			routes: {
 				include: ['/mods', '/mods/*'],
