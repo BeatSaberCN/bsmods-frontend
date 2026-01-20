@@ -26,7 +26,7 @@
   } = $props();
 
   function searchProfile(author: ModAuthor) {
-    window.open(`/user/${author.id}`, "_self");
+    window.open(`/front/user/${author.id}`, "_self");
   }
 
   let isNotInsanelyStupidTiny = new MediaQuery("min-width: 450px");

@@ -18,7 +18,7 @@
     <span class="w-20 h-20">
       <ModIcon
         src={appendURL(`cdn/icon/${mod.iconFileName}`)}
-        modUrl={`/mods/${mod.id}`}
+        modUrl={`/front/mods/${mod.id}`}
         smallCorners={true}
       />
     </span>
@@ -62,7 +62,7 @@
   </div>
   <!-- Bottom buttons -->
   <div class="flex flex-row gap-2 mt-auto">
-    <Button href={`/mods/${mod.id}`} class="flex-1">
+    <Button href={`/front/mods/${mod.id}`} class="flex-1">
       更多信息
     </Button>
     <Button

@@ -18,6 +18,12 @@ Do NOT allow users access other pages when deploy.
 
 All newly added code is under the MIT license, just like the upstream project.
 
+```cmd
+npm run build
+// npx wrangler dev
+npx wrangler deploy
+```
+
 # BadBSMods-Frontend
 
 Frontend for [BadBSMods](https://github.com/Saeraphinx/badbsmods) that is
