@@ -12,10 +12,6 @@ const config = {
 				persist: undefined
 			},
 			fallback: 'plaintext',
-			routes: {
-				include: ['/mods', '/mods/*', '/user','/user/*'],
-				exclude: ['<all>']
-			}
 		}),
 		paths: {
 			base: '/front'
