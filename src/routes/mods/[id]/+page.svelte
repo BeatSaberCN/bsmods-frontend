@@ -351,7 +351,7 @@
           <div>
             <div class="flex-col rounded-md bg-neutral-background-2 p-4 shadow-4"
                 style="display:inline-block;width:fit-content">
-              翻译不好？<Link target="=_blank" href={`https://github.com/BeatSaberCN/beatmods-agent/edit/master/inline_database/storage/mods/${mod.info.id}.json`}>贡献翻译</Link>
+              翻译不好？<Link target="_blank" href={`/json_edit/${mod.info.id}`}>简易编辑</Link>/<Link target="=_blank" href={`https://github.com/BeatSaberCN/beatmods-agent/edit/master/inline_database/storage/mods/${mod.info.id}.json`}>贡献翻译</Link>
             </div>
             <div class="flex-col rounded-md bg-neutral-background-2 p-4 shadow-4"
               style="display:inline-block;width:fit-content">
