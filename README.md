@@ -14,6 +14,32 @@ npm run build
 npx wrangler deploy
 ```
 
+## Local debug with backend
+
+step 1. run local backend
+
+```sh
+git clone git@github.com:BeatSaberCN/beatmods-agent.git
+cd beatmods-agent
+npm install
+npm run build
+npx wrangler dev
+```
+this should start an api server at http://127.0.0.1:8787/
+
+step 2. run local frontend
+
+```sh
+git clone git@github.com:BeatSaberCN/bsmods-frontend.git
+cd bsmods-frontend
+npm install
+npm run dev
+```
+
+step 3. open webbrowser like `http://localhost:5174/front/mods`
+
+it's important you should use `localhost` instead of `127.0.0.1`, or you will trouble with CROS problem.
+
 # BadBSMods-Frontend
 
 Frontend for [BadBSMods](https://github.com/Saeraphinx/badbsmods) that is
