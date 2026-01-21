@@ -20,7 +20,7 @@
   import { z } from "zod";
   import DescriptionPage from "$lib/components/ui/upload/DescriptionPage.svelte";
   import { untrack } from "svelte";
-  import { Categories, convertCategories } from "$lib/types/Categories";
+  import { Categories, categoryTranslate, convertCategories } from "$lib/types/Categories";
   import { sendRevoke, sendSaveEdit, sendSubmit } from "$lib/utils/api";
   import VersionCardV2 from "$lib/components/ui/versions/VersionCardV2.svelte";
   import type { DisplayApprovalModalFunction } from "$lib/types/Approval";
@@ -387,7 +387,7 @@
                 </div>
                 <div class="flex flex-col gap-1 justify-center align-middle">
                   <p class="text-sm font-semibold">分类:</p>
-                  <p class="silly-capitalize">{mod.info.category}</p>
+                  <p class="silly-capitalize">{categoryTranslate(mod.info.category)}</p>
                 </div>
                 <div class="flex flex-col gap-1 justify-center align-middle">
                   <p class="text-sm font-semibold">游戏名:</p>
