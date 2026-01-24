@@ -1,12 +1,14 @@
 import FlexSearch from "flexsearch";
 import type { Mod, ModData } from "../types/Mods";
-
 let modsIndex: FlexSearch.Index;
 let mods: Mod[];
 
 export function createModsIndex(data: Mod[]) {
   // create the mods index
-  modsIndex = new FlexSearch.Index({ tokenize: "forward" });
+  modsIndex = new FlexSearch.Index({ 
+    tokenize: "forward",
+    encoder: FlexSearch.Charset.CJK
+  });
 
   data.forEach((mod, i) => {
     // index the title and content together
