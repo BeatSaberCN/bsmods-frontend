@@ -113,7 +113,7 @@
   });
 </script>
 <div class="shadow-4" style="margin:10px 2px;padding:4px;border-radius:4px;background:#fff7cd">
-  本项目与BeatMods官方、bsaber.com官方无直接关系。页面由BeatMods前端源码进行定制，遵循MIT许可协议。
+  本项目不代表任何BeatMods官方立场、与bsaber.com无直接关系。页面由BeatMods前端源码进行定制，遵循MIT许可协议。
 </div>
 <div class="flex flex-col gap-4" class:!flex-row={isDesktop.current}>
   <div class="left-side flex flex-col gap-4">
