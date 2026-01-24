@@ -6,7 +6,7 @@
   class="flex-2 flex aspect-square rounded-[10px] bg-[#00000066] shadow-2"
   class:rounded-[6px]={smallCorners}
 >
-  <a href={modUrl}>
+  <a href={modUrl} target="mod_detail">
     <img
       {src}
       alt="Mod Icon"

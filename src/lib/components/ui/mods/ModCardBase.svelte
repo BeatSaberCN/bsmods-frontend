@@ -26,7 +26,7 @@
   } = $props();
 
   function searchProfile(author: ModAuthor) {
-    window.open(`/front/user/${author.id}`, "_self");
+    window.open(`/front/user/${author.id}`, "author");
   }
 
   let isNotInsanelyStupidTiny = new MediaQuery("min-width: 450px");
@@ -41,11 +41,12 @@
   >
     {#if inModPage}
     <!-- 导航栏被我给删了，所以加个返回按钮 -->
-    <a style="height:90%;display:flex;margin:auto 0;border-radius:4px" class="shadow-2" href="/front/mods">
+    <!-- <a style="height:90%;display:flex;margin:auto 0;border-radius:4px" class="shadow-2" href="/front/mods">
       <div style="width:20px;height:20px;margin:auto 0;" >
         <svg class="" viewBox="0 0 20 20" ><ArrowLeftFilled/></svg>
       </div>
-    </a>
+    </a> -->
+    <!-- 后续:返回版本号丢了，干脆改成了在新页面打开mod -->
     {/if}
 
     {#if isNotInsanelyStupidTiny.current}
@@ -57,7 +58,7 @@
     {/if}
     <div class="grid h-fit gap-2">
       <div class="flex h-fit w-fit flex-1 flex-row gap-1 md:mt-1">
-        <a class="text-lg leading-5 md:text-2xl" href="/front/mods/{mod.id}"
+        <a class="text-lg leading-5 md:text-2xl" href="/front/mods/{mod.id}" target="mod_detail"
           >{mod.name}</a
         >
         {#if author}

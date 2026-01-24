@@ -35,8 +35,8 @@
             {#each mod.authors as author, i}
               <Link
                 class="text-neutral-foreground-1"
-                as="button"
-                on:click={() => (window.location.href = `/front/user/${author.id}`)}
+                href={`/front/user/${author.id}`}
+                target="author"
               >
                 {author.username}{i < mod.authors.length - 1 ? ", " : ""}
               </Link>
@@ -62,7 +62,7 @@
   </div>
   <!-- Bottom buttons -->
   <div class="flex flex-row gap-2 mt-auto">
-    <Button href={`/front/mods/${mod.id}`} class="flex-1">
+    <Button href={`/front/mods/${mod.id}`} class="flex-1" target="mod_detail">
       更多信息
     </Button>
     <Button
