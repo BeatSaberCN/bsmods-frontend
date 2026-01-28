@@ -112,7 +112,7 @@
     localStorage.setItem("modViewStyle", viewStyle); // yes this is stupid to put it here, please move it somewhere else if you know where
   });
 </script>
-<div class="shadow-4" style="margin:10px 2px;padding:4px;border-radius:4px;background:#fff7cd">
+<div class="shadow-4 font-semibold text-neutral-foreground-2 bg-brand-background-2 p-2 rounded-lg my-4">
   本项目不代表任何BeatMods官方立场、与bsaber.com无关。页面由BeatMods前端源码定制，遵循MIT许可协议。
 </div>
 <div class="flex flex-col gap-4" class:!flex-row={isDesktop.current}>
