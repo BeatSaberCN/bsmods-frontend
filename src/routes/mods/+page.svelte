@@ -157,17 +157,13 @@
         class="flex-2 inline h-fit gap-2 rounded-xl bg-neutral-background-2 p-[7.5px] shadow-4"
       >
         <span>
-          你的设备屏幕太小，无法显示模组图标、更新日期等信息。请到各详情页面查看。
-          <svg class="inline w-[1.5em]" viewBox="0 0 20 20">
-            <EmojiSadRegular />
-          </svg>
+          <div style="display:inline-block;white-space:nowrap">(°ー°〃)&nbsp;</div>设备屏幕太小，无法显示模组图标、更新日期等信息。请到各详情页面查看。
+          
         </span>
       </div>
     {/if}
     {#if searchedMods.length === 0 || !selectedVersion}
-      <svg class="h-20 w-20" viewBox="0 0 20 20">
-        <EmojiSadRegular />
-      </svg>
+      <div style="font-size:20pt;margin:20px">۹(ÒہÓ)۶</div>
       {#if !modSearchLoading}
         {#if selectedVersion}
           <p>没有找到模组</p>
