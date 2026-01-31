@@ -4,7 +4,7 @@
   import { webLightTheme, webDarkTheme } from "@svelte-fui/themes";
 
   //props
-  let { theme = $bindable(webLightTheme), showCursor = $bindable(true) } =
+  let { theme = $bindable(webLightTheme), showCursor = $bindable(false) } =
     $props();
 </script>
 

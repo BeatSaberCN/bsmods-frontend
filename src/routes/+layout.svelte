@@ -18,7 +18,7 @@
   let { data, children }: { data: LayoutData; children: Snippet } = $props();
 
   let theme = $state(webLightTheme);
-  let showCursor = $state(true);
+  let showCursor = $state(false);
 
   let showPrideBanner = $state(false);
   let showPrideDialog = $state(false);
