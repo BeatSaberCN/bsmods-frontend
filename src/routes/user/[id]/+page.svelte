@@ -103,10 +103,8 @@
       </TabList>
     {/if}
     {#if slicedMods.length === 0}
-      <svg class="h-20 w-20" viewBox="0 0 20 20">
-        <EmojiSadRegular />
-      </svg>
-      <p>No mods found</p>
+      <div style="font-size:20pt;margin:20px">۹(ÒہÓ)۶</div>
+      <p>这里还没有找到模组</p>
     {/if}
     {#if slicedMods}
       {#each slicedMods as mod}
