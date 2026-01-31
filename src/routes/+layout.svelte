@@ -124,12 +124,12 @@
   <meta property="og:title" content="MirrorMods" />
   <meta
     property="og:description"
-    content="This is a mirror site of BeatMods"
+    content="这是一个BeatMods的镜像站"
   />
   <title>MirrorMods</title>
   <meta
     name="description"
-    content="This is a mirror site of BeatMods"
+    content="这是一个BeatMods的镜像站"
   />
   <meta
     property="og:image"
