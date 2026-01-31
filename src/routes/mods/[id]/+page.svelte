@@ -25,7 +25,7 @@
   import VersionCardV2 from "$lib/components/ui/versions/VersionCardV2.svelte";
   import type { DisplayApprovalModalFunction } from "$lib/types/Approval";
   import ApprovalDialog from "$lib/components/ui/approval/ApprovalDialog.svelte";
-  import { insertSpaces } from "$lib/utils/string";
+  import { insertSpaces, translateGameName } from "$lib/utils/string";
   import { Status, StatusTranslate } from "$lib/types/Status";
 
   let { data }: { data: PageData } = $props();
@@ -391,7 +391,7 @@
                 </div>
                 <div class="flex flex-col gap-1 justify-center align-middle">
                   <p class="text-sm font-semibold">游戏名:</p>
-                  <p class="silly-capitalize">{insertSpaces(mod.info.gameName)}</p>
+                  <p class="silly-capitalize">{translateGameName(insertSpaces(mod.info.gameName))}</p>
                 </div>
                 <div class="flex flex-col gap-1 justify-center align-middle">
                   <p class="text-sm font-semibold">状态:</p>
