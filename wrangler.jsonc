@@ -11,5 +11,9 @@
     "vars": {
         "PUBLIC_API_BASE_URL": "https://beatmods.bsaber.cn/",
         "PUBLIC_FILE_UPLOAD_LIMIT_MB": "0"
-    }
+    },
+	"observability" : {
+		"enabled": true,
+    	"head_sampling_rate": 1
+	}
 }
