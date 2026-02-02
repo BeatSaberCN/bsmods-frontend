@@ -8,6 +8,7 @@
   import type { PageData } from "../../../../routes/$types";
   import axios from "axios";
   import { env } from "$env/dynamic/public";
+    import { cn_numify } from "$lib/utils/cn_numify";
 
   let {
     version,
@@ -118,7 +119,7 @@
           <ArrowDownloadRegular />
         </svg>
         <span class="text-sm text-neutral-foreground-2 md:text-base">
-          {numify(version.downloadCount)}
+          {cn_numify(version.downloadCount)}
         </span>
       </div>
 

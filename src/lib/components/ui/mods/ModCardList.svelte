@@ -13,6 +13,7 @@
   import { getRelativeTimeString } from "$lib/utils/time";
     import ModTile from "./ModTile.svelte";
     import { StatusTranslate } from "$lib/types/Status";
+    import { cn_numify } from "$lib/utils/cn_numify";
 
   let {
     mod,
@@ -44,7 +45,7 @@
             <ArrowDownloadRegular />
           </svg>
           <span class="text-sm text-neutral-foreground-2 md:text-base"
-            >{numify(mod.latest.downloadCount)}</span
+            >{cn_numify(mod.latest.downloadCount)}</span
           >
         </div>
         <div class="flex w-fit flex-row gap-2">

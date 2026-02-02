@@ -8,6 +8,7 @@
   import axios from "axios";
     import type { DisplayApprovalModalFunction } from "$lib/types/Approval";
     import { onMount, tick } from "svelte";
+    import { cn_numify } from "$lib/utils/cn_numify";
 
   let {
     id,
@@ -171,7 +172,7 @@
           <ArrowDownloadRegular />
         </svg>
         <p class="text-sm text-neutral-foreground-2 p-0 md:text-base">
-          {numify(version.downloadCount)}
+          {cn_numify(version.downloadCount)}
         </p>
       </div>
 
